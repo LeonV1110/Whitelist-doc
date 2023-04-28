@@ -1,8 +1,8 @@
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import os
 import pymysql
 
-load_dotenv()
+#load_dotenv()
 DATABASEUSER = os.getenv('DATABASE_USERNAME')
 DATABASEPSW = os.getenv('DATABASE_PASSWORD')
 DATABASEHOST = os.getenv('DATABASE_HOST')
