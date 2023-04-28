@@ -1,3 +1,1 @@
-Setup enviroment variable without .env file
-Setup which port should be used
 Setup how to connect to the database in a different docker container
