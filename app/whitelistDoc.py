@@ -38,9 +38,10 @@ def create_doc():
 
 def create_doc_string():
     res = ""
+    setuplines = get_setup_lines()
     whitelist_lines = get_whitelist_lines()
     permission_lines = get_permission_lines()
-    lines = permission_lines + whitelist_lines
+    lines = setuplines + permission_lines + whitelist_lines
     for line in lines:
         res += line
     return res
@@ -67,4 +68,14 @@ def get_permission_lines():
         lines.append(line)
     return lines
 
-create_doc()
+def get_setup_lines():
+    
+    whitelist = "group=whitelist:reserve \n"
+    mvp = "group=MVP:reserve \n"
+    creator = "group=creator:balance,reserve,teamchange \n"
+    admin="group=admin:reserve \n"
+    seniorAdmin="group=senior:reserve \n"
+    dadmin="group=dadmin:reserve \n"
+    junior="group=junior:reserve \n"
+    
+    return [whitelist, mvp, creator, admin, seniorAdmin, dadmin, junior]
