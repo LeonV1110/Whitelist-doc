@@ -9,4 +9,5 @@ def home():
         content = create_doc_string()
     except Exception:
         return "There has been an error, go bother Leon"
+        #TODO handle different errors differently
     return Response(content, mimetype='text/plain')
