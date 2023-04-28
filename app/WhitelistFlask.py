@@ -1,6 +1,6 @@
-from app import app
+from flask import Flask, Response
+app = Flask(__name__)
 #from app.whitelistDoc import  create_doc_string
-from flask import Response
 
 @app.route('/')
 def home():
