@@ -55,7 +55,7 @@ def create_new_line(steam64ID, TPFID, role):
 def get_whitelist_lines():
     sql = "select player.steam64ID, player.TPFID from `player` join `whitelist` on player.TPFID= whitelist.TPFID"
     whitelists = excecute_query(sql, None, 2)
-    if whitelists is None: return ""
+    if whitelists is None: return []
     lines = []
     for whitelist in whitelists:
         line = create_new_line(whitelist['steam64ID'], whitelist['TPFID'], 'whitelist')
@@ -65,7 +65,7 @@ def get_whitelist_lines():
 def get_permission_lines():
     sql = "select player.steam64ID, player.TPFID, permission.permission from `player` join `permission` on player.TPFID= permission.TPFID order by permission.permission;"
     permissions = excecute_query(sql, None, 2)
-    if permissions is None: return ""
+    if permissions is None: return []
     lines = []
     for perm in permissions:
         line = create_new_line(perm['steam64ID'], perm['TPFID'], perm['permission'])
