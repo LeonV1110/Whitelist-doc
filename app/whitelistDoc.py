@@ -83,4 +83,4 @@ def get_setup_lines():
     dadmin="group=dadmin:changemap,cheat,balance,chat,kick,ban,cameraman,immune,reserve,teamchange,forceteamchange,canseeadminchat,demos,clientdemos \n"
     junior="group=junior:changemap,balance,chat,reserve,teamchange,canseeadminchat \n"
     
-    return [whitelist, mvp, creator, admin, seniorAdmin, dadmin, junior]
+    return [whitelist, mvp, cam, creator, admin, seniorAdmin, dadmin, junior]
