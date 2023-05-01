@@ -76,10 +76,11 @@ def get_setup_lines():
     
     whitelist = "group=whitelist:reserve \n"
     mvp = "group=MVP:reserve \n"
+    cam = "group=camonly:cameraman \n"
     creator = "group=creator:balance,reserve,teamchange \n"
-    admin="group=admin:reserve \n"
-    seniorAdmin="group=senior:reserve \n"
-    dadmin="group=dadmin:reserve \n"
-    junior="group=junior:reserve \n"
+    admin="group=admin:changemap,balance,chat,cameraman,kick,reserve,teamchange,canseeadminchat \n"
+    seniorAdmin="group=senior:changemap,cheat,balance,chat,kick,ban,cameraman,reserve,teamchange,forceteamchange,canseeadminchat,clientdemos \n"
+    dadmin="group=dadmin:changemap,cheat,balance,chat,kick,ban,cameraman,immune,reserve,teamchange,forceteamchange,canseeadminchat,demos,clientdemos \n"
+    junior="group=junior:changemap,balance,chat,reserve,teamchange,canseeadminchat \n"
     
     return [whitelist, mvp, creator, admin, seniorAdmin, dadmin, junior]
